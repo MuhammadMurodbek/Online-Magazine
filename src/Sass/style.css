@@ -13,6 +13,22 @@ body {
   background-image: linear-gradient(45deg, #7ba4b1, #47595e);
 }
 
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 20px;
+  outline: none;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -44,9 +60,6 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -64,13 +77,19 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: flex;
   width: 100%;
   padding: 10px;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
 }
 .navbar-part-info a {
   color: #fff !important;
 }
-.navbar-part-info ul {
+.navbar-part-info .nav-btn {
+  display: none;
+}
+.navbar-part-info .nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,10 +98,62 @@ ul {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-.navbar-part-info ul li {
+.navbar-part-info .nav-list li {
   margin: 0 10px;
   color: #333 !important;
+}
+.navbar-part .checkNavbarTrue {
+  height: auto !important;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+}
+.navbar-part .checkNavbarFalse {
+  height: 30px !important;
+  overflow: hidden !important;
+}
+@media only screen and (max-width: 625px) {
+  .navbar-part-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar-part-info .nav-btn {
+    display: inline-block;
+    padding-top: 3px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent !important;
+  }
+  .navbar-part-info .nav-br-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar-part-info .nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+    margin-left: 20%;
+  }
+  .navbar-part-info .nav-list li {
+    margin: 8px 0;
+  }
 }
 .navbar-part-shop {
   margin-right: 10px;
