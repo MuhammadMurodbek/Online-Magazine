@@ -1,6 +1,4 @@
 import React from 'react'
-import Button from '@material-ui/core/Button';
-// import {Animated} from "react-animated-css";
 import TextTruncate from 'react-text-truncate'; 
 import SearchIcon from '@material-ui/icons/Search';
 import Data from './Data.json'
@@ -10,12 +8,15 @@ function Main() {
     return (
         <div className="main">
             <span className="search">
-            <   SearchIcon className="search-icon" style={{color: '#fff'}}/>
-                <input type="search" placeholder="Search..."/>
+                <SearchIcon 
+                    className="search-icon" 
+                    style={{color: '#426696'}}
+                />
+                <input 
+                    type="search" 
+                    placeholder="Search..."
+                />
             </span> 
-            <span>
-                
-            </span>
             <div className="main-items">
                 <ul>
                     {

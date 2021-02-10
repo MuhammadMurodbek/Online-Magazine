@@ -14,11 +14,13 @@
     justify-content: center;
 }
 @mixin glass{
-    background: linear-gradient(to right,  rgba( 255, 255, 255, 0.1 ), rgba(194, 235, 235, 0.45));
+    background:white;
+    background:linear-gradient( to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    // background: linear-gradient(to right,  rgba( 255, 255, 255, 0.1 ), rgba(194, 235, 235, 0.45));
     box-shadow: 0 1px 32px 0 rgba(49, 51, 77, 0.1);
-    backdrop-filter: blur( 55px );
-    -webkit-backdrop-filter: blur( 55px );
+    backdrop-filter: blur(4rem );
     border-radius: 20px;
+    color:#426696;
     border: 1.2px solid rgba( 255, 255, 255, 0.15 );
 }
 body{
@@ -30,8 +32,9 @@ body{
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
-    filter:blur(0);
-    background-image:linear-gradient(45deg, #7ba4b1,#47595e );
+    background:linear-gradient(to right top, #65dfc9,#6cdbeb);
+    color:#426696;
+    // background-image:linear-gradient(45deg, #7ba4b1,#47595e );
 }
 body::-webkit-scrollbar {
     width: 0.5em;
@@ -50,6 +53,7 @@ body::-webkit-scrollbar {
 a{
     display: inline-block;
     text-decoration: none;
+    color:#426696;
 }
 ul{
     padding: 0;
@@ -79,7 +83,7 @@ ul{
             padding: 10px;
             transition: all ease 1s;
             a{
-                color: #fff !important;
+                color:#426696 !important;
             }
             .nav-btn{
                 display:none;
@@ -117,6 +121,7 @@ ul{
                 .nav-br-btn{
                     width: 100%;
                     @include d-sb;
+                    color:#426696;
                 }
                 .nav-list{
                     flex-direction: column;
@@ -171,6 +176,7 @@ ul{
         padding: 10px;
         .search-icon{
             transform: translateX(25px);
+            color:#426696;
         }
         input{    
             border:none;
@@ -178,13 +184,13 @@ ul{
             padding-left: 30px;
             font-size: 1.1rem;
             font-family: 'Poppins', sans-serif;
-            color: #fff;
-            caret-color: #fff;
+            color:#426696;
+            caret-color: #426696;;
             background-color: transparent;
             border-bottom: 1.9px solid #fff;
         }
         input::placeholder{
-            color: #ccc;
+            color:#426696;
         }
     }
     &-items{
@@ -215,6 +221,7 @@ ul{
             .cost-btn{
                 @include d-sb;
                 margin: 10px 0 2px;
+                
                 h5{
                     font-size:16px;
                 }
@@ -230,6 +237,7 @@ ul{
                     -webkit-backdrop-filter: blur( 55px );
                     border-radius: 15px;
                     border: 1px solid rgba( 255, 255, 255, 0.02 );
+                    color:#658ec6;
                 }
             }
         }
@@ -242,7 +250,7 @@ ul{
 .footer{
     width:100%;
     margin-top: 30px;
-    color:#fff;
+    color:#426696;
     &-wrapper{
         display:grid;
         grid-template-rows: 1fr 1fr;
@@ -307,5 +315,53 @@ ul{
             } 
             margin-bottom: 50px;
         }
+    }
+}
+
+
+//CATEGORY
+.category{
+    padding: 10px;
+    
+    &-wrapper{
+        @include d-ss;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+       
+        li{
+            padding: 10px;
+            
+            .cat-box-wrapper{
+                @include glass;
+                width: 300px;
+                height:auto;
+                padding: 10px;
+                overflow: hidden;
+                
+                .c-img-wr{
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 10px;
+                    img{
+                        width: 100%;
+                        height: 200px;
+                        border-radius:20px;
+                        object-fit: cover;
+                    }
+                }
+                
+
+                    .navlink-text{
+                        padding: 10px;
+                        background-color:red;
+                        @include d-ss;
+                        @include glass;
+                        height: auto;
+                    }
+                
+            }
+        }
+        
     }
 }
