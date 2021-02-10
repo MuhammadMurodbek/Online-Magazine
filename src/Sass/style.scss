@@ -321,44 +321,54 @@ ul{
 
 //CATEGORY
 .category{
-    padding: 10px;
-    
+    width: 100%;
+    height: auto;
+    text-align: center;
+    &::before{
+        content: "";
+        position: absolute;
+        top:10%;
+        left:92%;
+        display:inline-block;
+        width: 100px;
+        height: 100px;
+        background-color:red;
+    }
     &-wrapper{
+        @include glass;
         @include d-ss;
+        width: 95%;
+        margin: 30px auto;
         flex-wrap: wrap;
-        padding: 0;
-        margin: 0;
-       
+        box-sizing:border-box;
+        padding: 20px 0;
         li{
             padding: 10px;
             
             .cat-box-wrapper{
                 @include glass;
+                background:linear-gradient( to right bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.1)) !important;
                 width: 300px;
                 height:auto;
                 padding: 10px;
                 overflow: hidden;
-                
-                .c-img-wr{
+              
+                img{
                     width: 100%;
-                    height: auto;
+                    height: 200px;
                     margin-bottom: 10px;
-                    img{
-                        width: 100%;
-                        height: 200px;
-                        border-radius:20px;
-                        object-fit: cover;
-                    }
+                    border-radius:20px;
+                    object-fit: cover;
                 }
-                
-
-                    .navlink-text{
-                        padding: 10px;
-                        background-color:red;
-                        @include d-ss;
-                        @include glass;
-                        height: auto;
-                    }
+            
+                .navlink-text{
+                    padding: 10px;
+                    background-color:red;
+                    @include d-ss;
+                    @include glass;
+                    background:linear-gradient( to right top, rgba(255,255,255,0.2), rgba(255,255,255,0.7)) !important;
+                    height: auto;
+                }
                 
             }
         }
