@@ -21,10 +21,8 @@ const Category = () => {
                     lastFilter.map((item,index)=>(
                         <li key={index}>
                              <div className="cat-box-wrapper">
-                                 <div className="c-img-wr">
-                                     <img src={item.image} alt={item.title}/>
-                                 </div>
-                                <NavLink to="/dash" className="navlink-text">{item.title}</NavLink>
+                                <img src={item.image} alt={item.title}/>
+                                <NavLink to="/products" className="navlink-text">{item.title}</NavLink>
                              </div>
                         </li>
                     ))
