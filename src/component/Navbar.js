@@ -29,7 +29,7 @@ export  function Navbar() {
                     </ul>
                </span>
                 <span className="navbar-part-shop">
-                    <IconButton style={{color:"#fff"}} aria-label="add to shopping cart">
+                    <IconButton style={{color:"#426696"}} aria-label="add to shopping cart">
                         <Badge badgeContent={4} color="secondary">
                             <AddShoppingCartIcon />
                         </Badge>   
